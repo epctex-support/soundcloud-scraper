@@ -23,15 +23,17 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on SoundCloud that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on SoundCloud that should be visited. Possible fields are:
 
-| Field                | Type    | Description                                                                                                                                                                                                    |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| startUrls            | Array   | (optional) List of SoundCloud URLs. URLs to start with. It should be list, search, track, user, album or playlist URLs.                                                                                                                 |
-| includeComments       | Boolean | (optional) This will add all the comments that SoundCloud provides into the track objects. Please keep in mind that the time and resources the actor uses will increase proportionally by the number of comments. |
-| endPage              | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.                                                          |
-| maxItems             | Integer | (optional) You can limit scraped items. This should be useful when you search through the big lists or search results.                                                                                                |
-| proxy                | Object  | Proxy configuration                                                                                                                                                                                            |
+- `startUrls`: (Required) (Array) List of SoundCloud URLs. URLs to start with. It should be list, search, track, user, album or playlist URLs.
+
+- `includeComments`: (Optional) (Boolean) This will add all the comments that SoundCloud provides into the track objects. Please keep in mind that the time and resources the actor uses will increase proportionally by the number of comments.
+
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
